@@ -16,26 +16,28 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <nav class="center topnav-container">
-      <img src="./img/main-logo.svg" alt="simple scanner logo" />
-      <div class="links-container">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#demo">Demo</a>
-        <a href="#team">Team</a>
-      </div>
-      <!-- <button>Free Trial</button> -->
-    </nav>
-
-    <div class="container center">
-      <section id="features" data-label="features">
-        <div class="hero-text">
-          <h1>Protect Yourself. It's Simple.</h1>
+    <div class="container">
+      <section id="features" data-label="features" class="main">
+        <nav class="topnav-container">
+          <img src="./img/main-logo.svg" alt="simple scanner logo" />
+          <div class="links-container">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#demo">Demo</a>
+            <a href="#team">Team</a>
+          </div>
+          <!-- <button>Free Trial</button> -->
+        </nav>
+        <div class="hero-text maxw">
+          <h1>
+            Protect Yourself.<br />
+            It's Simple.
+          </h1>
           <p>No-frills scanner that does what it needs to do</p>
         </div>
       </section>
 
-      <section id="demo" class="demo" data-label="demo">
+      <section id="demo" class="demo maxw main" data-label="demo">
         <div class="demo-col1">
           <h2>Reports Sent Straight to your inbox</h2>
           <img src="./img/screenshot.svg" />
@@ -49,7 +51,7 @@
         </div>
       </section>
 
-      <section id="pricing" data-label="pricing">
+      <section id="pricing" data-label="pricing" class="mainr">
         <h2>We're straight to the point with our pricing</h2>
         <div class="pricing-container">
           <div class="price">
@@ -68,38 +70,43 @@
       </section>
 
       <section id="team" class="team" data-label="team">
-        <h2 class="team-header">A one man team that cares about your safety</h2>
-        <div class="team-container">
-          <div class="team-summary">
-            <p>
-              Back in the early 2000s I was hacked and had money stolen from an
-              account.
-            </p>
-            <p>
-              As a result of that day, and a long love of technology, I decided
-              to become more security aware and prepared.
-            </p>
-            <p>
-              Years later I have found myself working in a variety of different
-              roles in IT, from pen-tester, sys admin, devops, and lately as a
-              software developer. With each of these roles I have brought
-              security mindedness to everything I do so to ensure that I and
-              others won't have to experience that kind of disruption again.
-            </p>
+        <div class="main">
+          <h2 class="team-header">
+            A one man team that cares about your safety
+          </h2>
+          <div class="team-container">
+            <div class="team-summary">
+              <p>
+                Back in the early 2000s I was hacked and had money stolen from
+                an account.
+              </p>
+              <p>
+                As a result of that day, and a long love of technology, I
+                decided to become more security aware and prepared.
+              </p>
+              <p>
+                Years later I have found myself working in a variety of
+                different roles in IT, from pen-tester, sys admin, devops, and
+                lately as a software developer. With each of these roles I have
+                brought security mindedness to everything I do so to ensure that
+                I and others won't have to experience that kind of disruption
+                again.
+              </p>
+            </div>
+            <img src="/img/profile.svg" />
           </div>
-          <img src="/img/profile.svg" />
         </div>
+
+        <footer>
+          <div class="footer-links">
+            <a>Contact</a>
+            <a>Privacy Policy</a>
+          </div>
+          <img src="./img/footer-logo.svg" />
+          <p>© 2022 Simple Scanner</p>
+        </footer>
       </section>
     </div>
-
-    <footer class="center">
-      <div class="footer-links">
-        <a>Contact</a>
-        <a>Privacy Policy</a>
-      </div>
-      <img src="./img/footer-logo.svg" />
-      <p>© 2022 Simple Scanner</p>
-    </footer>
 
     <script src="./app.js"></script>
   </body>

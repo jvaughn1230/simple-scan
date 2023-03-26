@@ -11,9 +11,16 @@
   --btn-text-color: #f9f9f9;
 }
 
-.center {
-  padding-inline: 5rem;
-}
+/* 
+TOD0: Correct margin for footer, need to adjust the inline margin so the footer expands full width (maybe max-w or inline not sure) 
+Fix image size for footer
+Need to move padding line - currently assigned to body, causing footer to not be full width of page
+
+*/
+
+/* .center {
+  margin-inline: 5rem;
+} */
 
 * {
   box-sizing: border-box;
@@ -36,6 +43,22 @@ img {
   max-width: 100%;
 }
 
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.main {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+
+  margin-inline: 5rem;
+}
+
+.maxw {
+  max-width: 90%;
+}
+
 a {
   text-decoration: none;
   color: var(--primary-link-color);
@@ -49,12 +72,12 @@ a:hover {
 .topnav-container {
   display: flex;
   justify-content: space-between;
-  background-color: #2c4ab6;
   padding-top: 1.5rem;
 }
 
 nav img {
   width: 10%;
+  min-width: 90px;
 }
 
 .links-container {
@@ -86,19 +109,19 @@ nav button:hover {
   position: fixed;
 }
 
-section {
-  padding-top: 3rem;
-  min-height: 100vh;
-  scroll-snap-align: start;
-}
-
 footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--footer-color);
   color: var(--primary-link-color);
-  padding: 2rem;
+  padding-bottom: 1.5rem;
+  margin-inline: 0;
+}
+
+footer img {
+  width: 6em;
+  padding-top: 1em;
 }
 
 .footer-links {
@@ -149,21 +172,24 @@ footer {
 #features h1 {
   margin: 0;
   padding-top: 5rem;
-  font-size: 128px;
+  font-size: clamp(80px, 7.8125vw, 120px);
   font-weight: 600;
   opacity: 0.8;
   font-family: "Rajdhani";
 }
 
 #features p {
-  font-size: 40px;
+  font-size: clamp(30px, 2.6042vw, 40px);
   opacity: 0.8;
 }
 
+#team {
+  padding-bottom: 0;
+}
 .team {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .team-container {
   display: flex;
@@ -229,13 +255,12 @@ footer {
   opacity: 0.75;
 }
 
-/* Side Nav CSS */
 .sidenav {
-  --nav-gap: 50px;
+  --nav-gap: 30px;
   padding: var(--nav-gap);
   position: fixed;
-  right: 0;
-  top: 50%;
+  right: 5%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -260,8 +285,8 @@ footer {
 .sidenav-link {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
-  height: var(--nav-gap);
-  width: var(--nav-gap);
+  height: 25px;
+  width: 25px;
   transition: transform(transform 0.1s);
 }
 
