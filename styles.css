@@ -2,6 +2,9 @@
   --primary-color: #2c4ab6;
   --footer-color: #44558b;
   --purple-btn: #785987;
+  --bg-color: #2c4177;
+  --pink-circle: #785987;
+  --blue-circle: #2c4ab6;
 
   --primary-font: "Rajdhani", sans-serif;
   --links-font: "Titillium Web", sans-serif;
@@ -9,7 +12,11 @@
   --primary-font-color: #fefefe;
   --primary-link-color: #eeeded;
   --btn-text-color: #f9f9f9;
+
+  --circle-blur: blur(25px);
+  --circle-opacity: 40%;
 }
+
 * {
   box-sizing: border-box;
   scroll-snap-type: y mandatory;
@@ -22,9 +29,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
+  background-color: var(--bg-color);
   font-family: var(--primary-font);
   color: var(--primary-font-color);
+  position: relative;
 }
 
 img {
@@ -57,6 +65,36 @@ a:hover {
   max-width: 90%;
 }
 
+.relative {
+  position: relative;
+}
+
+.circle2 {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 30vw;
+  background-color: var(--pink-circle);
+  position: absolute;
+  filter: var(--circle-blur);
+  overflow: hidden;
+  z-index: -1;
+  left: 30vw;
+  top: 8vw;
+  opacity: var(--circle-opacity);
+}
+
+.circle1 {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 40vw;
+  background-color: var(--blue-circle);
+  position: absolute;
+  filter: var(--circle-blur);
+  overflow: hidden;
+  z-index: -1;
+  opacity: var(--circle-opacity);
+}
+
 /* sidenav Styles */
 .sidenav {
   --nav-gap: 30px;
@@ -77,10 +115,11 @@ a:hover {
 .sidenav-label {
   color: black;
   font-weight: bold;
-  font-size: 48px;
+
+  font-size: clamp(1px, 3.125vw, 48px);
   opacity: 0;
   transition: opacity 0.1s;
-  padding-right: 0.5rem;
+  padding-right: 1.5rem;
 }
 
 .sidenav-link:hover ~ .sidenav-label {
@@ -148,22 +187,6 @@ a:hover {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .topnav__links {
-    display: none;
-  }
-  .topnav__links.active {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 120px;
-  }
-}
-
 /* Features Section CSS */
 #features {
   display: flex;
@@ -173,7 +196,7 @@ a:hover {
 #features h1 {
   margin: 0;
   padding-top: 5rem;
-  font-size: clamp(80px, 7.8125vw, 120px);
+  font-size: clamp(50px, 7.8125vw, 120px);
   font-weight: 600;
   opacity: 0.8;
   font-family: "Rajdhani";
@@ -188,20 +211,21 @@ a:hover {
 .demo {
   display: flex;
   justify-content: space-between;
-  padding-right: 11rem;
+  padding-right: 15.625vw;
+  padding-top: 3rem;
 }
 
-.demo-col1,
+/* .demo-col1,
 .demo-col2 {
   margin-top: 3rem;
-}
+} */
 
 .demo-col1 {
   max-width: 40%;
 }
 
 .demo-col1 h2 {
-  font-size: 4rem;
+  font-size: clamp(1px, 4.1667vw, 64px);
   margin-top: 0;
 }
 
@@ -213,10 +237,32 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.demo-col2::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: whitesmoke;
+  top: 0;
+  bottom: 0;
+  left: -15%;
 }
 
 .demo-col2 p {
-  font-size: 2rem;
+  font-size: clamp(24px, 2.0833vw, 64px);
+}
+
+.demo-col2 p::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 5;
+  left: -17.5%;
 }
 
 /* Pricing Section Styles */
@@ -345,3 +391,61 @@ Button CSS if used again
 .topnav button:hover {
   opacity: 0.75;
 } */
+
+@media (max-width: 900px) {
+  .demo {
+    /* padding-right: 70px; */
+    flex-direction: column;
+  }
+  .demo-col1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* .demo-col2 {
+    flex-direction: row;
+  } */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .topnav__links {
+    display: none;
+  }
+  .topnav__links.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 120px;
+  }
+
+  .circle1 {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50vw;
+  }
+  .circle2 {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  #features h1 {
+    font-size: clamp(60px, 7.8125vw, 100px);
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .circle2 {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+  }
+}
