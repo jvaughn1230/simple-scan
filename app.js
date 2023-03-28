@@ -38,3 +38,19 @@ function activateNavigation() {
 }
 
 activateNavigation();
+
+// Mobile Menu
+const hamburger = document.querySelector(".hamburger");
+const topNavMenu = document.querySelector(".topnav__links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  topNavMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".topnav__link").forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    topNavMenu.classList.remove("active");
+  })
+);
