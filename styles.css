@@ -10,18 +10,6 @@
   --primary-link-color: #eeeded;
   --btn-text-color: #f9f9f9;
 }
-
-/* 
-TOD0: Correct margin for footer, need to adjust the inline margin so the footer expands full width (maybe max-w or inline not sure) 
-Fix image size for footer
-Need to move padding line - currently assigned to body, causing footer to not be full width of page
-
-*/
-
-/* .center {
-  margin-inline: 5rem;
-} */
-
 * {
   box-sizing: border-box;
   scroll-snap-type: y mandatory;
@@ -48,6 +36,16 @@ section {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary-link-color);
+  font-family: var(--links-font);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
 .main {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
@@ -59,111 +57,114 @@ section {
   max-width: 90%;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-link-color);
-  font-family: var(--links-font);
+/* sidenav Styles */
+.sidenav {
+  --nav-gap: 30px;
+  padding: var(--nav-gap);
+  position: fixed;
+  right: 5%;
+  top: 60%;
+  transform: translateY(-50%);
 }
 
-a:hover {
-  opacity: 0.75;
+.sidenav-item {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: var(--nav-gap);
 }
 
-.topnav-container {
+.sidenav-label {
+  color: black;
+  font-weight: bold;
+  font-size: 48px;
+  opacity: 0;
+  transition: opacity 0.1s;
+  padding-right: 0.5rem;
+}
+
+.sidenav-link:hover ~ .sidenav-label {
+  opacity: 1;
+}
+
+.sidenav-link {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  transition: transform(transform 0.1s);
+}
+
+.sidenav-link-selected {
+  background: black;
+  transform: scale(1.4);
+}
+
+/* Top Nav Styles */
+.topnav {
   display: flex;
   justify-content: space-between;
   padding-top: 1.5rem;
 }
 
-nav img {
+.topnav img {
   width: 10%;
   min-width: 90px;
 }
 
-.links-container {
-  width: 33%;
+.topnav__links-container {
   display: flex;
   justify-content: space-around;
   align-items: end;
 }
 
-nav a {
+.topnav a {
   font-size: 18px;
+  padding: 2rem;
 }
 
-nav button {
-  border-radius: 10px;
-  padding: 0.75em;
-  border-style: none;
-  background-color: #785987;
-  color: var(--btn-text-color);
-  font-size: 18px;
-  opacity: 0.5;
+.hamburger {
+  display: inline-block;
+  display: none;
 }
 
-nav button:hover {
-  opacity: 0.75;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px auto;
 }
 
-.sticky {
-  position: fixed;
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
 }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--footer-color);
-  color: var(--primary-link-color);
-  padding-bottom: 1.5rem;
-  margin-inline: 0;
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-footer img {
-  width: 6em;
-  padding-top: 1em;
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.footer-links {
-  display: flex;
-  justify-content: space-around;
-  width: 15%;
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .topnav__links {
+    display: none;
+  }
+  .topnav__links.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 120px;
+  }
 }
 
-.demo {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid white;
-}
-
-.demo-col1,
-.demo-col2 {
-  margin-top: 3rem;
-}
-
-.demo-col1 {
-  max-width: 40%;
-}
-
-.demo-col1 h2 {
-  font-size: 4rem;
-  margin-top: 0;
-}
-
-.demo-col1 img {
-  width: 70%;
-}
-
-.demo-col2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.demo-col2 p {
-  font-size: 2rem;
-}
-
+/* Features Section CSS */
 #features {
   display: flex;
   flex-direction: column;
@@ -183,44 +184,51 @@ footer img {
   opacity: 0.8;
 }
 
-#team {
-  padding-bottom: 0;
+/* Demo Section styles */
+.demo {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 11rem;
 }
-.team {
+
+.demo-col1,
+.demo-col2 {
+  margin-top: 3rem;
+}
+
+.demo-col1 {
+  max-width: 40%;
+}
+
+.demo-col1 h2 {
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+.demo-col1 img {
+  width: 100%;
+}
+
+.demo-col2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.team-container {
-  display: flex;
-  justify-content: space-around;
+
+.demo-col2 p {
+  font-size: 2rem;
 }
 
-.team-header {
-  max-width: 40%;
-  font-size: 3rem;
-  margin-inline: auto;
-}
-
-.team-summary {
-  max-width: 40%;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.team-container img {
-  width: 20%;
-  height: auto;
-}
-
+/* Pricing Section Styles */
 .pricing-container {
   display: flex;
   justify-content: space-around;
+  padding-right: 11rem;
 }
 
 .pricing-container div {
   border: 1px solid blue;
-  padding: 5rem 10rem;
+  padding: 4rem 8rem;
   border-radius: 20px;
   background-color: rgba(79, 101, 172, 0.8);
   border: solid 2px #4f65ac;
@@ -255,42 +263,85 @@ footer img {
   opacity: 0.75;
 }
 
-.sidenav {
-  --nav-gap: 30px;
-  padding: var(--nav-gap);
-  position: fixed;
-  right: 5%;
-  top: 60%;
-  transform: translateY(-50%);
+/* About Section Styles */
+#team {
+  padding-bottom: 0;
 }
-
-.sidenav-item {
-  align-items: center;
+.team {
   display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: var(--nav-gap);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team-container {
+  display: flex;
+  justify-content: space-around;
 }
 
-.sidenav-label {
-  color: black;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.1s;
+.team-header {
+  max-width: 40%;
+  font-size: 3rem;
+  margin-inline: auto;
 }
 
-.sidenav-link:hover ~ .sidenav-label {
-  opacity: 1;
+.team-summary {
+  max-width: 40%;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
-.sidenav-link {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  transition: transform(transform 0.1s);
+.team-container img {
+  width: 20%;
+  height: auto;
 }
 
-.sidenav-link-selected {
-  background: black;
-  transform: scale(1.4);
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--footer-color);
+  color: var(--primary-link-color);
+  padding-bottom: 1.5rem;
+  margin-inline: 0;
 }
+
+footer img {
+  width: 6em;
+  padding-top: 1em;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+}
+
+/* .bg{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 74, 182, 0.42);
+  background: rgba(120, 89, 135, 0.31);
+} */
+
+/* Other background properties (maybe) 
+  z-index: -1;
+  blur:(55.5px)
+  position: relative
+  Note: may also need to assign position relative to each section if using z-index 
+*/
+
+/* 
+Button CSS if used again
+.topnav button {
+  border-radius: 10px;
+  padding: 0.75em;
+  border-style: none;
+  background-color: #785987;
+  color: var(--btn-text-color);
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.topnav button:hover {
+  opacity: 0.75;
+} */
