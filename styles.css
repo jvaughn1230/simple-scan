@@ -33,6 +33,11 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-font-color);
   position: relative;
+  background-image: url(./img/lines.svg), url(./img/lines-2.svg), url(./img/lines-3.svg)  ;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position-y: -10%, 20%, 115%;
+  background-position-x: 0%, 20%, 20%; 
+  background-size: auto, 120%, 110%; 
 }
 
 img {
