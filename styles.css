@@ -100,6 +100,20 @@ a:hover {
   opacity: var(--circle-opacity);
 }
 
+.circle3 {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 40vw;
+  background-color: var(--pink-circle);
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  opacity: var(--circle-opacity);
+  filter: var(--circle-blur);
+  right: 10vw;
+  top: 10vw;
+}
+
 /* sidenav Styles */
 .sidenav {
   --nav-gap: 30px;
@@ -218,6 +232,7 @@ a:hover {
   justify-content: space-between;
   padding-right: 15.625vw;
   padding-top: 3rem;
+  position: relative;
 }
 
 /* .demo-col1,
@@ -277,9 +292,13 @@ a:hover {
   padding-right: 11rem;
 }
 
+#pricing h2 {
+  font-size: clamp(1px, 3.125vw, 3rem);
+}
+
 .pricing-container div {
   border: 1px solid blue;
-  padding: 4rem 8rem;
+  padding: 4em 8em;
   border-radius: 20px;
   background-color: rgba(79, 101, 172, 0.8);
   border: solid 2px #4f65ac;
@@ -297,13 +316,13 @@ a:hover {
 }
 
 .price p {
-  font-size: 1.5rem;
+  font-size: clamp(1px, 1.5625vw, 10rem);
   font-weight: 400;
 }
 
 .price button {
   border-radius: 14px;
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   border: none;
   background-color: var(--purple-btn);
   color: white;
@@ -405,11 +424,30 @@ Button CSS if used again
   .demo-col1 {
     display: flex;
     flex-direction: row;
+    min-width: 40vw;
+    max-width: 100%;
   }
 
-  /* .demo-col2 {
-    flex-direction: row;
-  } */
+  .demo-col1 h2 {
+    font-size: 40px;
+  }
+
+  .demo-col1 img {
+    width: 70%;
+  }
+
+  .circle3 {
+    right: auto;
+    top: 30vh;
+  }
+
+  .demo-col2::after {
+    left: -5%;
+  }
+
+  .demo-col2 p::before {
+    left: -6.5%;
+  }
 }
 
 @media (max-width: 768px) {
