@@ -33,11 +33,12 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-font-color);
   position: relative;
-  background-image: url(./img/lines.svg), url(./img/lines-2.svg), url(./img/lines-3.svg)  ;
+  background-image: url(./img/lines.svg), url(./img/lines-2.svg),
+    url(./img/lines-3.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-y: -10%, 20%, 115%;
-  background-position-x: 0%, 20%, 20%; 
-  background-size: auto, 120%, 110%; 
+  background-position-x: 0%, 20%, 20%;
+  background-size: auto, 120%, 110%;
 }
 
 img {
@@ -74,18 +75,21 @@ a:hover {
   position: relative;
 }
 
+.circle {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  filter: var(--circle-blur);
+  opacity: var(--circle-opacity);
+}
+
 .circle2 {
   width: 30vw;
   height: 30vw;
   border-radius: 30vw;
   background-color: var(--pink-circle);
-  position: absolute;
-  filter: var(--circle-blur);
-  overflow: hidden;
-  z-index: -1;
   left: 30vw;
   top: 8vw;
-  opacity: var(--circle-opacity);
 }
 
 .circle1 {
@@ -93,11 +97,6 @@ a:hover {
   height: 40vw;
   border-radius: 40vw;
   background-color: var(--blue-circle);
-  position: absolute;
-  filter: var(--circle-blur);
-  overflow: hidden;
-  z-index: -1;
-  opacity: var(--circle-opacity);
 }
 
 .circle3 {
@@ -105,13 +104,32 @@ a:hover {
   height: 40vw;
   border-radius: 40vw;
   background-color: var(--pink-circle);
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-  opacity: var(--circle-opacity);
-  filter: var(--circle-blur);
   right: 10vw;
   top: 10vw;
+}
+
+.circle4 {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50vw;
+  background-color: var(--blue-circle);
+}
+
+.circle5 {
+  background-color: var(--pink-circle);
+  height: 35vw;
+  width: 35vw;
+  border-radius: 35vw;
+  left: 0vw;
+  opacity: 30%;
+}
+.circle6 {
+  background-color: var(--blue-circle);
+  height: 40vw;
+  width: 50vw;
+  border-radius: 45vw;
+  left: 50vw;
+  bottom: 5vw;
 }
 
 /* sidenav Styles */
@@ -286,14 +304,21 @@ a:hover {
 }
 
 /* Pricing Section Styles */
-.pricing-container {
+
+#pricing {
   display: flex;
-  justify-content: space-around;
-  padding-right: 11rem;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #pricing h2 {
-  font-size: clamp(1px, 3.125vw, 3rem);
+  font-size: 2.6042vw;
+  opacity: 0.75;
+}
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  /* padding-right: 11.4583vw; */
 }
 
 .pricing-container div {
@@ -305,18 +330,18 @@ a:hover {
 }
 
 .price h2 {
-  font-size: 3rem;
+  font-size: clamp(1px, 4.1667vw, 64px);
   font-weight: 700;
 }
 
 .price h2 span {
-  font-size: 1rem;
+  font-size: 2.0833vw;
   vertical-align: text-top;
   font-weight: 700;
 }
 
 .price p {
-  font-size: clamp(1px, 1.5625vw, 10rem);
+  font-size: clamp(1px, 2.0833vw, 10rem);
   font-weight: 400;
 }
 
@@ -326,7 +351,8 @@ a:hover {
   border: none;
   background-color: var(--purple-btn);
   color: white;
-  font-size: 1.25rem;
+  font-size: clamp(10px, 1.5625vw, 2rem);
+  /* Old Font Size: 1.3021vw, 2rem */
 }
 
 .price button:hover {
@@ -349,13 +375,13 @@ a:hover {
 
 .team-header {
   max-width: 40%;
-  font-size: 3rem;
+  font-size: clamp(2rem, 3.125vw, 3rem);
   margin-inline: auto;
 }
 
 .team-summary {
   max-width: 40%;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.3021vw, 1.25rem);
   line-height: 1.5;
 }
 
@@ -416,6 +442,25 @@ Button CSS if used again
   opacity: 0.75;
 } */
 
+/* @media (max-width: 1000px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-container div {
+    padding: 2rem 4rem;
+  }
+
+  #pricing h2 {
+    font-size: 3.125vw;
+  }
+
+  .price p {
+    font-size: 1.5625vw;
+  }
+} */
+
 @media (max-width: 900px) {
   .demo {
     /* padding-right: 70px; */
@@ -448,6 +493,43 @@ Button CSS if used again
   .demo-col2 p::before {
     left: -6.5%;
   }
+
+  #pricing {
+    font-size: 40px;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .pricing-container div {
+    padding: 2rem 4rem;
+  }
+
+  .price h2 {
+    font-size: 4.1667vw;
+  }
+
+  .price p {
+    font-size: 2.0833vw;
+  }
+
+  .price button {
+    font-size: 1.5625vw;
+  }
+
+  .team-header {
+    max-width: 100%;
+  }
+
+  .team-container img {
+    width: 40%;
+  }
+
+  /* .team-summary {
+    line-height: 1;
+  } */
 }
 
 @media (max-width: 768px) {
@@ -475,6 +557,22 @@ Button CSS if used again
     height: 40vw;
     border-radius: 40vw;
   }
+
+  /* .pricing-container {
+    flex-direction: column;
+  }
+
+  .price h2 {
+    font-size: 4.167vw;
+  }
+
+  .price p {
+    font-size: 2.083vw;
+  }
+
+  .price button {
+    font-size: 1.5625vw;
+  } */
 }
 
 @media (max-width: 600px) {
