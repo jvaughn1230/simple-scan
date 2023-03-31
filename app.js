@@ -40,6 +40,11 @@ function activateNavigation() {
 
 activateNavigation();
 
+function newDate() {
+  return new Date().getFullYear();
+}
+
+document.getElementById("year").innerHTML = newDate();
 // Mobile Menu
 const hamburger = document.querySelector(".hamburger");
 const topNavMenu = document.querySelector(".topnav__links");
