@@ -33,11 +33,13 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-font-color);
   position: relative;
-  background-image: url(./img/lines.svg), url(./img/lines-2.svg), url(./img/lines-3.svg)  ;
+  overflow-x: hidden;
+  background-image: url(./img/lines.svg), url(./img/lines-2.svg),
+    url(./img/lines-3.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-y: -10%, 20%, 115%;
-  background-position-x: 0%, 20%, 20%; 
-  background-size: auto, 120%, 110%; 
+  background-position-x: 0%, 20%, 20%;
+  background-size: auto, 120%, 110%;
 }
 
 img {
@@ -74,17 +76,11 @@ a:hover {
   position: relative;
 }
 
-.circle2 {
-  width: 30vw;
-  height: 30vw;
-  border-radius: 30vw;
-  background-color: var(--pink-circle);
+.circle {
   position: absolute;
-  filter: var(--circle-blur);
   overflow: hidden;
   z-index: -1;
-  left: 30vw;
-  top: 8vw;
+  filter: var(--circle-blur);
   opacity: var(--circle-opacity);
 }
 
@@ -93,13 +89,52 @@ a:hover {
   height: 40vw;
   border-radius: 40vw;
   background-color: var(--blue-circle);
-  position: absolute;
-  filter: var(--circle-blur);
-  overflow: hidden;
-  z-index: -1;
-  opacity: var(--circle-opacity);
 }
 
+.circle2 {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 30vw;
+  background-color: var(--pink-circle);
+  left: 30vw;
+  top: 8vw;
+}
+
+.circle3 {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 40vw;
+  background-color: var(--pink-circle);
+  right: 10vw;
+}
+
+.circle4 {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50vw;
+  background-color: var(--blue-circle);
+  bottom: 13.5vw;
+  left: 10vw;
+}
+
+.circle5 {
+  background-color: var(--pink-circle);
+  height: 35vw;
+  width: 35vw;
+  border-radius: 35vw;
+  opacity: 35%;
+  left: -5vw;
+}
+
+.circle6 {
+  height: 40vw;
+  width: 50vw;
+  border-radius: 45vw;
+  left: 40vw;
+  overflow-x: hidden;
+  opacity: 0.55;
+  background-color: var(--blue-circle);
+}
 /* sidenav Styles */
 .sidenav {
   --nav-gap: 30px;
@@ -272,37 +307,38 @@ a:hover {
 
 /* timeline */
 
-ul, li{
+ul,
+li {
   list-style: none;
   padding: 0;
 }
 
-.app-features{
+.app-features {
   margin-top: 2rem;
   border-radius: 12px;
   position: relative;
 }
 
-li{
+li {
   padding-bottom: 6rem;
-  border-left: 4px solid #D9DDE8;
+  border-left: 4px solid #d9dde8;
   position: relative;
   padding-left: 20px;
   margin-left: 10px;
 }
 
-li:last-child{
+li:last-child {
   border: 0px;
   padding-bottom: 0;
   left: 3px;
 }
 
-li:before{
-  content: '';
+li:before {
+  content: "";
   width: 20px;
   height: 20px;
-  background: #6879A6;
-  border: 5px solid #D9DDE8;
+  background: #6879a6;
+  border: 5px solid #d9dde8;
   /* box-shadow: 3px 3px 0px #bab5f8;
   box-shadow: 3px 3px 0px #bab5f8; */
   border-radius: 50%;
@@ -311,50 +347,60 @@ li:before{
   top: 0px;
 }
 
-.feature{
-
+.feature {
   font-size: clamp(24px, 2.0833vw, 64px);
 }
 
-
 /* Pricing Section Styles */
+
+#pricing h2 {
+  font-size: clamp(28px, 2.6042vw, 10rem);
+  opacity: 0.75;
+}
+
+.price {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
 .pricing-container {
   display: flex;
   justify-content: space-around;
-  padding-right: 11rem;
+  padding-right: 11.4583vw;
 }
 
 .pricing-container div {
   border: 1px solid blue;
-  padding: 4rem 8rem;
+  padding: 4em 8em;
   border-radius: 20px;
   background-color: rgba(79, 101, 172, 0.8);
   border: solid 2px #4f65ac;
 }
 
 .price h2 {
-  font-size: 3rem;
+  font-size: clamp(32px, 3.125vw, 10rem);
   font-weight: 700;
 }
 
 .price h2 span {
-  font-size: 1rem;
+  font-size: clamp(12px, 1.0417vw, 10rem);
   vertical-align: text-top;
   font-weight: 700;
 }
 
 .price p {
-  font-size: 1.5rem;
+  font-size: clamp(16px, 1.5625vw, 10rem);
   font-weight: 400;
 }
 
 .price button {
   border-radius: 14px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  padding: 0.625em 1.25em;
   border: none;
   background-color: var(--purple-btn);
   color: white;
-  font-size: 1.25rem;
+  font-size: clamp(16px, 1.3021vw, 10rem);
 }
 
 .price button:hover {
@@ -443,7 +489,16 @@ Button CSS if used again
 .topnav button:hover {
   opacity: 0.75;
 } */
-
+@media (max-width: 1100px) {
+  .pricing-container {
+    row-gap: 1rem;
+    align-items: center;
+  }
+  .pricing-container div {
+    padding: 3em 6em;
+    max-width: 60%;
+  }
+}
 @media (max-width: 900px) {
   .demo {
     /* padding-right: 70px; */
@@ -451,12 +506,24 @@ Button CSS if used again
   }
   .demo-col1 {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   /* .demo-col2 {
     flex-direction: row;
   } */
+  .pricing-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .price {
+    text-align: center;
+  }
+
+  .price h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -484,11 +551,20 @@ Button CSS if used again
     height: 40vw;
     border-radius: 40vw;
   }
+
+  /* change padding of pricing container  */
+  .pricing-container div {
+    padding: 1.5em 4em;
+  }
 }
 
 @media (max-width: 600px) {
   #features h1 {
     font-size: clamp(60px, 7.8125vw, 100px);
+  }
+
+  #pricing h2 {
+    font-size: 24px;
   }
 
   .sidenav {
@@ -499,5 +575,12 @@ Button CSS if used again
     width: 50vw;
     height: 50vw;
     border-radius: 50vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .pricing-container div {
+    padding: 1rem 2rem;
+    max-width: 80%;
   }
 }
