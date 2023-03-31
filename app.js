@@ -20,6 +20,7 @@ function activateNavigation() {
       });
 
       const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
+      // console.log("visible section: ",visibleSection)
 
       document
         .querySelector(

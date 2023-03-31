@@ -33,12 +33,11 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-font-color);
   position: relative;
-  background-image: url(./img/lines.svg), url(./img/lines-2.svg),
-    url(./img/lines-3.svg);
+  background-image: url(./img/lines.svg), url(./img/lines-2.svg), url(./img/lines-3.svg)  ;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-y: -10%, 20%, 115%;
-  background-position-x: 0%, 20%, 20%;
-  background-size: auto, 120%, 110%;
+  background-position-x: 0%, 20%, 20%; 
+  background-size: auto, 120%, 110%; 
 }
 
 img {
@@ -75,21 +74,18 @@ a:hover {
   position: relative;
 }
 
-.circle {
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-  filter: var(--circle-blur);
-  opacity: var(--circle-opacity);
-}
-
 .circle2 {
   width: 30vw;
   height: 30vw;
   border-radius: 30vw;
   background-color: var(--pink-circle);
+  position: absolute;
+  filter: var(--circle-blur);
+  overflow: hidden;
+  z-index: -1;
   left: 30vw;
   top: 8vw;
+  opacity: var(--circle-opacity);
 }
 
 .circle1 {
@@ -97,39 +93,11 @@ a:hover {
   height: 40vw;
   border-radius: 40vw;
   background-color: var(--blue-circle);
-}
-
-.circle3 {
-  width: 40vw;
-  height: 40vw;
-  border-radius: 40vw;
-  background-color: var(--pink-circle);
-  right: 10vw;
-  top: 10vw;
-}
-
-.circle4 {
-  width: 50vw;
-  height: 50vw;
-  border-radius: 50vw;
-  background-color: var(--blue-circle);
-}
-
-.circle5 {
-  background-color: var(--pink-circle);
-  height: 35vw;
-  width: 35vw;
-  border-radius: 35vw;
-  left: 0vw;
-  opacity: 30%;
-}
-.circle6 {
-  background-color: var(--blue-circle);
-  height: 40vw;
-  width: 50vw;
-  border-radius: 45vw;
-  left: 50vw;
-  bottom: 5vw;
+  position: absolute;
+  filter: var(--circle-blur);
+  overflow: hidden;
+  z-index: -1;
+  opacity: var(--circle-opacity);
 }
 
 /* sidenav Styles */
@@ -250,7 +218,6 @@ a:hover {
   justify-content: space-between;
   padding-right: 15.625vw;
   padding-top: 3rem;
-  position: relative;
 }
 
 /* .demo-col1,
@@ -303,56 +270,91 @@ a:hover {
   left: -17.5%;
 }
 
+/* timeline */
+
+ul, li{
+  list-style: none;
+  padding: 0;
+}
+
+.app-features{
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+li{
+  padding-bottom: 6rem;
+  border-left: 4px solid #D9DDE8;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+li:last-child{
+  border: 0px;
+  padding-bottom: 0;
+  left: 3px;
+}
+
+li:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #6879A6;
+  border: 5px solid #D9DDE8;
+  /* box-shadow: 3px 3px 0px #bab5f8;
+  box-shadow: 3px 3px 0px #bab5f8; */
+  border-radius: 50%;
+  position: absolute;
+  left: -16px;
+  top: 0px;
+}
+
+.feature{
+
+  font-size: clamp(24px, 2.0833vw, 64px);
+}
+
+
 /* Pricing Section Styles */
-
-#pricing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#pricing h2 {
-  font-size: 2.6042vw;
-  opacity: 0.75;
-}
 .pricing-container {
   display: flex;
   justify-content: space-around;
-  /* padding-right: 11.4583vw; */
+  padding-right: 11rem;
 }
 
 .pricing-container div {
   border: 1px solid blue;
-  padding: 4em 8em;
+  padding: 4rem 8rem;
   border-radius: 20px;
   background-color: rgba(79, 101, 172, 0.8);
   border: solid 2px #4f65ac;
 }
 
 .price h2 {
-  font-size: clamp(1px, 4.1667vw, 64px);
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .price h2 span {
-  font-size: 2.0833vw;
+  font-size: 1rem;
   vertical-align: text-top;
   font-weight: 700;
 }
 
 .price p {
-  font-size: clamp(1px, 2.0833vw, 10rem);
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
 .price button {
   border-radius: 14px;
-  padding: 0.625em 1.25em;
+  padding: 10px 20px;
   border: none;
   background-color: var(--purple-btn);
   color: white;
-  font-size: clamp(10px, 1.5625vw, 2rem);
-  /* Old Font Size: 1.3021vw, 2rem */
+  font-size: 1.25rem;
 }
 
 .price button:hover {
@@ -375,13 +377,13 @@ a:hover {
 
 .team-header {
   max-width: 40%;
-  font-size: clamp(2rem, 3.125vw, 3rem);
+  font-size: 3rem;
   margin-inline: auto;
 }
 
 .team-summary {
   max-width: 40%;
-  font-size: clamp(1rem, 1.3021vw, 1.25rem);
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -442,25 +444,6 @@ Button CSS if used again
   opacity: 0.75;
 } */
 
-/* @media (max-width: 1000px) {
-  .pricing-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing-container div {
-    padding: 2rem 4rem;
-  }
-
-  #pricing h2 {
-    font-size: 3.125vw;
-  }
-
-  .price p {
-    font-size: 1.5625vw;
-  }
-} */
-
 @media (max-width: 900px) {
   .demo {
     /* padding-right: 70px; */
@@ -469,66 +452,10 @@ Button CSS if used again
   .demo-col1 {
     display: flex;
     flex-direction: row;
-    min-width: 40vw;
-    max-width: 100%;
   }
 
-  .demo-col1 h2 {
-    font-size: 40px;
-  }
-
-  .demo-col1 img {
-    width: 70%;
-  }
-
-  .circle3 {
-    right: auto;
-    top: 30vh;
-  }
-
-  .demo-col2::after {
-    left: -5%;
-  }
-
-  .demo-col2 p::before {
-    left: -6.5%;
-  }
-
-  #pricing {
-    font-size: 40px;
-  }
-
-  .pricing-container {
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
-
-  .pricing-container div {
-    padding: 2rem 4rem;
-  }
-
-  .price h2 {
-    font-size: 4.1667vw;
-  }
-
-  .price p {
-    font-size: 2.0833vw;
-  }
-
-  .price button {
-    font-size: 1.5625vw;
-  }
-
-  .team-header {
-    max-width: 100%;
-  }
-
-  .team-container img {
-    width: 40%;
-  }
-
-  /* .team-summary {
-    line-height: 1;
+  /* .demo-col2 {
+    flex-direction: row;
   } */
 }
 
@@ -557,22 +484,6 @@ Button CSS if used again
     height: 40vw;
     border-radius: 40vw;
   }
-
-  /* .pricing-container {
-    flex-direction: column;
-  }
-
-  .price h2 {
-    font-size: 4.167vw;
-  }
-
-  .price p {
-    font-size: 2.083vw;
-  }
-
-  .price button {
-    font-size: 1.5625vw;
-  } */
 }
 
 @media (max-width: 600px) {
