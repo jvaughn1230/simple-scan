@@ -270,7 +270,8 @@ a:hover {
 }
 
 .demo-col1 img {
-  width: 100%;
+  /* width: 100%; */
+  min-width: 270px;
 }
 
 .demo-col2 {
@@ -348,7 +349,7 @@ li:before {
 }
 
 .feature {
-  font-size: clamp(24px, 2.0833vw, 64px);
+  font-size: clamp(16px, 2.0833vw, 64px);
 }
 
 /* Pricing Section Styles */
@@ -513,14 +514,19 @@ Button CSS if used again
     justify-content: center;
     gap: 2.5em;
   }
+
+  .demo {
+    padding-right: 10.4167vw;
+  }
 }
 @media (max-width: 900px) {
   .demo {
     /* padding-right: 70px; */
-    flex-direction: column;
+    /* flex-direction: column; */
+    padding-right: 5vw;
   }
   .demo-col1 {
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
   }
 
@@ -590,6 +596,11 @@ Button CSS if used again
     max-width: 80%;
     text-align: center;
   }
+
+  .demo {
+    margin-right: 2.5vw;
+    margin-left: 2em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -617,6 +628,24 @@ Button CSS if used again
 
   .team-summary {
     max-width: 60vw;
+  }
+
+  .demo {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .demo-col1 {
+    max-width: 80%;
+  }
+
+  .demo-col1 h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    padding-bottom: 3rem;
   }
 }
 
