@@ -12,18 +12,59 @@
       rel="stylesheet"
     />
     <title>Contact</title>
+
+    <link rel="stylesheet" href="contact.styles.css" />
   </head>
   <body class="contactPage">
-    <h1 class="contactTitle">Contact Form</h1>
-    <form class="contactForm">
-      <label>Name:</label>
-      <input type="text" id="name" placeholder="Your Name" />
-      <label>Email:</label>
-      <input type="email" id="email" placeholder="Your Email" />
-      <label>Summary</label>
-      <textarea id="summary" name="summary" placeholder="Details..."></textarea>
-      <!-- Name, Email, Comment, Question, Concern -->
-      <input type="submit" value="submit" />
-    </form>
+    <nav class="navbar">
+      <img src="./img/main-logo.svg" alt="simple scanner logo" />
+      <a href="index.html">Home</a>
+    </nav>
+    <div class="contact">
+      <h1 class="contact__title">Contact Form</h1>
+      <form class="contact__form">
+        <div class="form__row">
+          <label>Name:</label>
+          <input
+            class="form__input"
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+
+        <div class="form__row">
+          <label>Email:</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+
+        <label>Summary</label>
+        <textarea
+          id="summary"
+          name="summary"
+          placeholder="Details..."
+          required
+        ></textarea>
+
+        <!-- Name, Email, Comment, Question, Concern -->
+        <input type="submit" value="submit" class="form__submit" />
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="/contact.html">Contact</a>
+        <a>Privacy Policy</a>
+      </div>
+      <img src="./img/footer-logo.svg" />
+      <p class="copyright">© <span id="year"></span> Simple Scanner</p>
+    </footer>
   </body>
 </html>
