@@ -60,3 +60,18 @@ document.querySelectorAll(".topnav__link").forEach((n) =>
     topNavMenu.classList.remove("active");
   })
 );
+
+// jquery smooth scrolling to ensure smooth scrolling for all browsers
+$(document).ready(function(){
+  $('.sidenav-link').click(function(e){
+    e.preventDefault();
+    // console.log("event: ", e)
+    let target = $($(this).attr('href'));
+    // console.log("target: ",target)
+    if(target.length){
+      let scrollTo = target.offset().top;
+      // console.log("scrollTo: ",scrollTo)
+      $('body, html').animate({scrollTop: scrollTo+'px'}, 500);
+    }
+  });
+});
