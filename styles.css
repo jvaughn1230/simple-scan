@@ -493,13 +493,17 @@ li:before {
 
 /* Footer Styles */
 footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+ 
   background-color: var(--footer-color);
   color: var(--primary-link-color);
-  padding-bottom: 1.5rem;
-  margin-inline: 0;
+  /* padding-bottom: 1.5rem;
+  margin-inline: 0; */
+}
+
+.footer-content { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer img {
