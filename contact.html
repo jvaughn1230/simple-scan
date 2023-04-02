@@ -18,7 +18,19 @@
   <body class="contactPage">
     <nav class="navbar">
       <img src="./img/main-logo.svg" alt="simple scanner logo" />
-      <a href="/">Home</a>
+      <div class="topnav__links-container">
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="topnav__links">
+          <a href="/#features" class="topnav__link">Features</a>
+          <a href="/#demo" class="topnav__link">Demo</a>
+          <a href="/#pricing" class="topnav__link">Pricing</a>
+          <a href="/#team" class="topnav__link">Team</a>
+        </div>
+      </div>
     </nav>
     <div class="contact">
       <h1 class="contact__title">Contact Form</h1>
@@ -62,5 +74,7 @@
       <img src="./img/footer-logo.svg" />
       <p class="copyright">© <span id="year"></span> Simple Scanner</p>
     </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>
