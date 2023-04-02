@@ -1,7 +1,7 @@
 :root {
   --footer-color: #44558b;
   --purple-btn: #785987;
-  --light-blue-btn: #44558B;
+  --light-blue-btn: #44558b;
   --bg-color: #2c4177;
   --pink-circle: #785987;
   --blue-circle: #2c4ab6;
@@ -160,14 +160,16 @@ a:hover {
   opacity: 0;
   transition: opacity 0.1s;
   margin-right: 1.5rem;
-  
 }
 
 @keyframes moveLeft {
-  from {margin-right: 0;}
-  to {margin-right:1.5rem;}
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 1.5rem;
+  }
 }
-
 
 .sidenav-link:hover ~ .sidenav-label {
   opacity: 1;
@@ -176,7 +178,7 @@ a:hover {
   animation-name: moveLeft;
   animation-duration: 800ms;
   border-radius: 5px;
-  padding:0 10px; 
+  padding: 0 10px;
 }
 
 /* .side-nav-link:hover::before{
@@ -192,9 +194,7 @@ a:hover {
   height: 5px;
 } */
 
-
-.sidenav-label:hover { 
-
+.sidenav-label:hover {
 }
 
 .sidenav-link {
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .sidenav-link-selected {
-  background: #8AA4CC;
+  background: #8aa4cc;
   transform: scale(1.2);
 }
 
@@ -233,7 +233,7 @@ a:hover {
   padding: 1rem 2rem;
 }
 
-.topnav a:hover { 
+.topnav a:hover {
   background: var(--light-blue-btn);
   border-radius: 5px;
   transition: all 500ms;
@@ -698,5 +698,13 @@ Button CSS if used again
 @media (max-width: 400px) {
   .team-summary {
     font-size: 14px;
+  }
+
+  #features h1 {
+    font-size: 40px;
+  }
+
+  #features p {
+    font-size: 25px;
   }
 }
