@@ -273,14 +273,14 @@ a:hover {
 #features h1 {
   margin: 0;
   padding-top: 5rem;
-  font-size: clamp(50px, 7.8125vw, 120px);
+  font-size: clamp(40px, 7.8125vw, 120px);
   font-weight: 600;
   opacity: 0.8;
   font-family: "Rajdhani";
 }
 
 #features p {
-  font-size: clamp(30px, 2.6042vw, 40px);
+  font-size: clamp(24px, 2.6042vw, 40px);
   opacity: 0.8;
 }
 
@@ -590,6 +590,12 @@ Button CSS if used again
   .team-header,
   .team-summary {
     max-width: 60%;
+  }
+
+  body{
+  background-position-y: -30%, 20%, 85%;
+  background-position-x: 0%, 20%, 20%;
+  background-size: auto, auto, auto;
   }
 }
 
