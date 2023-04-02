@@ -275,14 +275,14 @@ a:hover {
 #features h1 {
   margin: 0;
   padding-top: 5rem;
-  font-size: clamp(40px, 7.8125vw, 120px);
+  font-size: clamp(50px, 7.8125vw, 120px);
   font-weight: 600;
   opacity: 0.8;
   font-family: "Rajdhani";
 }
 
 #features p {
-  font-size: clamp(24px, 2.6042vw, 40px);
+  font-size: clamp(40px, 2.6042vw, 40px);
   opacity: 0.8;
 }
 
@@ -392,6 +392,11 @@ li:before {
 }
 
 /* Pricing Section Styles */
+#pricing { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 #pricing h2 {
   font-size: clamp(28px, 2.6042vw, 10rem);
@@ -401,8 +406,10 @@ li:before {
 .price {
   /* display: flex;
   flex-direction: column;
-  justify-content: center; */
+  align-items: center; */
+  text-align: center;
 }
+
 .pricing-container {
   display: flex;
   justify-content: space-around;
@@ -458,7 +465,9 @@ li:before {
 }
 .team-container {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  padding-right: 11.4583vw;
+  gap: 2rem;
 }
 
 .team-header {
@@ -468,12 +477,15 @@ li:before {
 }
 
 .team-summary {
-  max-width: 40%;
-  font-size: clamp(16px, 1.3021vw, 10rem);
+  flex: 2; 
+  /* max-width: 40%; */
+  /* font-size: clamp(16px, 1.3021vw, 10rem); */
+  font-size: clamp(20px, 1.5625vw, 10rem);
   line-height: 1.5;
 }
 
 .team-container img {
+  flex: 1/2;
   width: 20%;
   min-width: 180px;
   height: auto;
@@ -543,6 +555,7 @@ Button CSS if used again
   .pricing-container {
     row-gap: 1rem;
     align-items: center;
+    padding-right: 0;
   }
   .pricing-container div {
     padding: 3em 6em;
@@ -550,12 +563,18 @@ Button CSS if used again
   }
 
   .team-container {
-    justify-content: center;
+    /* justify-content: center; */
     gap: 2.5em;
   }
 
   .demo {
     padding-right: 10.4167vw;
+  }
+
+  body {
+    background-position-y: -20%, 20%, 95%;
+    background-position-x: 0%, 20%, 20%;
+    background-size: auto, 120%, auto;
   }
 }
 @media (max-width: 900px) {
@@ -646,6 +665,19 @@ Button CSS if used again
     margin-right: 2.5vw;
     margin-left: 2em;
   }
+
+  .team-container  {
+    padding-right: 0;
+  }
+  .team img {
+    display: none;
+  }
+
+  .team-summary {
+    max-width: 100vw;
+  }
+
+  
 }
 
 @media (max-width: 600px) {
@@ -667,13 +699,7 @@ Button CSS if used again
     border-radius: 50vw;
   }
 
-  .team img {
-    display: none;
-  }
 
-  .team-summary {
-    max-width: 60vw;
-  }
 
   .demo {
     flex-direction: column;
@@ -692,21 +718,33 @@ Button CSS if used again
   li {
     padding-bottom: 3rem;
   }
+
+  .pricing-container div { 
+    max-width: 100%;
+    
+  }
 }
 
 @media (max-width: 500px) {
-  .pricing-container div {
+  /* .pricing-container div {
     padding: 1rem 2rem;
-    max-width: 80%;
-  }
+    max-width: 100%;
+  } */
 
   .team-header {
     font-size: 24px;
   }
+
+  .team-summary {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 400px) {
-  .team-summary {
-    font-size: 14px;
-  }
+
+
+  .pricing-container div {
+    padding: 1.5em 2em;
+    max-width: 100%;
+  } 
 }
