@@ -1,9 +1,7 @@
 :root {
-  --footer-color: #44558b;
-  --purple-btn: #785987;
-  --light-blue-btn: #44558b;
+  --light-purple: #785987;
+  --light-blue: #44558b;
   --bg-color: #2c4177;
-  --pink-circle: #785987;
   --blue-circle: #2c4ab6;
 
   --primary-font: "Rajdhani", sans-serif;
@@ -15,6 +13,8 @@
 
   --circle-blur: blur(25px);
   --circle-opacity: 40%;
+
+  --main-header-font: clamp(40px, 7.8125vw, 7.5rem);
 }
 
 * {
@@ -95,7 +95,7 @@ a:hover {
   width: 30vw;
   height: 30vw;
   border-radius: 30vw;
-  background-color: var(--pink-circle);
+  background-color: var(--light-purple);
   left: 30vw;
   top: 8vw;
 }
@@ -104,7 +104,7 @@ a:hover {
   width: 40vw;
   height: 40vw;
   border-radius: 40vw;
-  background-color: var(--pink-circle);
+  background-color: var(--light-purple);
   right: 10vw;
 }
 
@@ -118,7 +118,7 @@ a:hover {
 }
 
 .circle5 {
-  background-color: var(--pink-circle);
+  background-color: var(--light-purple);
   height: 35vw;
   width: 35vw;
   border-radius: 35vw;
@@ -155,7 +155,6 @@ a:hover {
 .sidenav-label {
   color: var(--btn-text-color);
   font-weight: bold;
-  /* font-size: clamp(1px, 16w, 48px); */
   font-size: clamp(1px, 3.125vw, 48px);
   opacity: 0;
   transition: opacity 0.1s;
@@ -173,28 +172,12 @@ a:hover {
 
 .sidenav-link:hover ~ .sidenav-label {
   opacity: 1;
-  background: var(--light-blue-btn);
+  background: var(--light-blue);
   /* transition: all 800ms; */
   animation-name: moveLeft;
   animation-duration: 800ms;
   border-radius: 5px;
   padding: 0 10px;
-}
-
-/* .side-nav-link:hover::before{
-  content:""; 
-  height: 5px;
-  width: 100px; 
-  border-bottom: 2px solid #000;
-} */
-
-/* .sidenav-label::after {
-  content:""; 
-  border-bottom: 2px solid #000;
-  height: 5px;
-} */
-
-.sidenav-label:hover {
 }
 
 .sidenav-link {
@@ -234,7 +217,7 @@ a:hover {
 }
 
 .topnav a:hover {
-  background: var(--light-blue-btn);
+  background: var(--light-blue);
   border-radius: 5px;
   transition: all 500ms;
 }
@@ -263,21 +246,20 @@ a:hover {
 }
 
 /* Features Section CSS */
-#features {
+.features {
   display: flex;
   flex-direction: column;
 }
 
-#features h1 {
+.features h1 {
   margin: 0;
   padding-top: 5rem;
-  font-size: clamp(40px, 7.8125vw, 120px);
+  font-size: var(--main-header-font);
   font-weight: 600;
   opacity: 0.8;
-  font-family: "Rajdhani";
 }
 
-#features p {
+.features p {
   font-size: clamp(24px, 2.6042vw, 40px);
   opacity: 0.8;
 }
@@ -290,11 +272,6 @@ a:hover {
   padding-top: 3rem;
 }
 
-/* .demo-col1,
-.demo-col2 {
-  margin-top: 3rem;
-} */
-
 .demo-col1 {
   max-width: 40%;
 }
@@ -305,40 +282,7 @@ a:hover {
 }
 
 .demo-col1 img {
-  /* width: 100%; */
   min-width: 270px;
-}
-
-.demo-col2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-
-.demo-col2::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  background-color: whitesmoke;
-  top: 0;
-  bottom: 0;
-  left: -15%;
-}
-
-.demo-col2 p {
-  font-size: clamp(24px, 2.0833vw, 64px);
-}
-
-.demo-col2 p::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 5;
-  left: -17.5%;
 }
 
 /* timeline */
@@ -390,6 +334,7 @@ li:before {
 /* Pricing Section Styles */
 
 #pricing h2 {
+  /* Low end was 28px */
   font-size: clamp(28px, 2.6042vw, 10rem);
   opacity: 0.75;
 }
@@ -434,7 +379,7 @@ li:before {
   /* padding: 10px 20px; */
   padding: 0.625em 1.25em;
   border: none;
-  background-color: var(--purple-btn);
+  background-color: var(--light-purple);
   color: white;
   font-size: clamp(16px, 1.3021vw, 10rem);
 }
@@ -444,13 +389,12 @@ li:before {
 }
 
 /* About Section Styles */
-#team {
-  padding-bottom: 0;
-}
+
 .team {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 0;
 }
 .team-container {
   display: flex;
@@ -480,7 +424,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--footer-color);
+  background-color: var(--light-blue);
   color: var(--primary-link-color);
   padding-bottom: 1.5rem;
   margin-inline: 0;
@@ -506,35 +450,7 @@ footer img {
   padding-right: 1em;
 }
 
-/* .bg{
-  width: 100vw;
-  height: 100vh;
-  background: rgba(44, 74, 182, 0.42);
-  background: rgba(120, 89, 135, 0.31);
-} */
-
-/* Other background properties (maybe) 
-  z-index: -1;
-  blur:(55.5px)
-  position: relative
-  Note: may also need to assign position relative to each section if using z-index 
-*/
-
-/* 
-Button CSS if used again
-.topnav button {
-  border-radius: 10px;
-  padding: 0.75em;
-  border-style: none;
-  background-color: #785987;
-  color: var(--btn-text-color);
-  font-size: 18px;
-  opacity: 0.5;
-}
-
-.topnav button:hover {
-  opacity: 0.75;
-} */
+/* Responsiveness */
 @media (max-width: 1100px) {
   .pricing-container {
     row-gap: 1rem;
@@ -556,22 +472,13 @@ Button CSS if used again
 }
 @media (max-width: 900px) {
   .demo {
-    /* padding-right: 70px; */
-    /* flex-direction: column; */
     padding-right: 5vw;
-  }
-  .demo-col1 {
-    /* display: flex; */
-    /* flex-direction: row; */
   }
 
   .team-container img {
     align-self: flex-start;
   }
 
-  /* .demo-col2 {
-    flex-direction: row;
-  } */
   .pricing-container {
     flex-direction: column;
     justify-content: space-around;
@@ -609,7 +516,7 @@ Button CSS if used again
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: var(--light-blue-btn);
+    background-color: var(--light-blue);
     top: 120px;
   }
 
@@ -646,10 +553,6 @@ Button CSS if used again
 }
 
 @media (max-width: 600px) {
-  #features h1 {
-    font-size: clamp(60px, 7.8125vw, 100px);
-  }
-
   #pricing h2 {
     font-size: 24px;
   }
@@ -707,11 +610,11 @@ Button CSS if used again
     font-size: 14px;
   }
 
-  #features h1 {
+  /* .features h1 {
     font-size: 40px;
-  }
+  } */
 
-  #features p {
+  .features p {
     font-size: 25px;
   }
 }
