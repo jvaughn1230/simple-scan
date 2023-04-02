@@ -34,12 +34,23 @@ body {
   color: var(--primary-font-color);
   position: relative;
   overflow-x: hidden;
+}
+
+.body-index { 
   background-image: url(./img/lines.svg), url(./img/lines-2.svg),
-    url(./img/lines-3.svg);
+  url(./img/lines-3.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-y: -10%, 20%, 115%;
   background-position-x: 0%, 20%, 20%;
   background-size: auto, 120%, 110%;
+}
+
+.body-contact { 
+  background-image: url(./img/lines.svg);
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-size: auto;
+  min-height: 100vh;
 }
 
 img {
@@ -555,6 +566,95 @@ Button CSS if used again
 .topnav button:hover {
   opacity: 0.75;
 } */
+
+/************* CONTACT FORM ***************/
+
+.contact {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.contact h1 { 
+  padding-top: 2rem; 
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact__form {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 16px;
+}
+
+label {
+  font-size: 32px;
+  justify-self: end;
+}
+
+.form__submit {
+  background-color: var(--purple-btn);
+  grid-column: 2/3;
+  width: 33%;
+  justify-self: end;
+  padding: 0.625em 1.25em;
+  font-size: clamp(16px, 1.3021vw, 10rem);
+  color: white;
+  border-radius: 14px;
+  min-width: fit-content;
+  border: none;
+  font-family: var(--links-font);
+}
+
+.form__submit:hover {
+  opacity: 0.75;
+}
+
+.form__input,
+textarea {
+  padding: 12px 20px;
+  font-size: 16px;
+  border:none;
+  background-color: var(--footer-color);
+  font-family: var(--links-font);
+  color: var(--primary-font-color);
+}
+::placeholder{
+  font-family: var(--links-font);
+  color: #E8E8E8;
+  
+}
+a {
+  text-decoration: none;
+  color: var(--primary-link-color);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+input {
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.contact-footer{ 
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  width: 100vw;
+}
+/********* end contact form ***********/
+
+
 @media (max-width: 1100px) {
   .pricing-container {
     row-gap: 1rem;
@@ -575,7 +675,7 @@ Button CSS if used again
     padding-right: 10.4167vw;
   }
 
-  body {
+  .body-index {
     background-position-y: -20%, 20%, 95%;
     background-position-x: 0%, 20%, 20%;
     background-size: auto, 120%, auto;
@@ -617,7 +717,7 @@ Button CSS if used again
     max-width: 60%;
   }
 
-  body{
+  .body-index {
   background-position-y: -30%, 20%, 85%;
   background-position-x: 0%, 20%, 20%;
   background-size: auto, auto, auto;
@@ -727,6 +827,30 @@ Button CSS if used again
     max-width: 100%;
     
   }
+
+ /********* CONTACT FORM ***********/
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__submit {
+    align-self: center;
+  }
+
+  .contact {
+    margin-top: 1em;
+  }
+
+  .contact__title {
+    font-size: clamp(20px, 2.6043vw, 2.5rem);
+  }
+
+  label,
+  .form__input,
+  textarea {
+    font-size: clamp(12px, 1.3021vw, 1.25rem);
+  }
+  /*********** end contact form ***************/
 }
 
 @media (max-width: 500px) {

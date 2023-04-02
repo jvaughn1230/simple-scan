@@ -1,4 +1,5 @@
 function activateNavigation() {
+
   const sections = document.querySelectorAll("section");
   const sideNavContainer = document.createElement("nav");
   const navItems = Array.from(sections).map((section) => {

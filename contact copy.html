@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap" rel="stylesheet" />
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="contact.styles.css" />
+  </head>
+
+  <body class="contactPage">
+    <nav class="navbar">
+      <img src="./img/main-logo.svg" alt="simple scanner logo" />
+      <div class="topnav__links-container">
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="topnav__links">
+          <a href="/#features" class="topnav__link">Features</a>
+          <a href="/#demo" class="topnav__link">Demo</a>
+          <a href="/#pricing" class="topnav__link">Pricing</a>
+          <a href="/#team" class="topnav__link">Team</a>
+        </div>
+      </div>
+    </nav>
+    <div class="contact">
+      <h1 class="contact__title">Contact Form</h1>
+      <form class="contact__form">
+        <label>Name:</label>
+        <input class="form__input" type="text" id="name" placeholder="Your Name" required />
+
+        <label>Email:</label>
+        <input class="form__input" type="email" id="email" placeholder="Your Email" required />
+
+        <label>summary:</label>
+        <textarea id="summary" name="summary" rows="4" placeholder="Details..." required></textarea>
+
+        <input type="submit" value="submit" class="form__submit" />
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="/contact.html">Contact</a>
+        <a>Privacy Policy</a>
+      </div>
+      <img src="./img/footer-logo.svg" />
+      <p class="copyright">© <span id="year"></span> Simple Scanner</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+
+</html>

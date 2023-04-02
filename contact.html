@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,74 +8,62 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap" rel="stylesheet" />
     <title>Contact</title>
-
-    <link rel="stylesheet" href="contact.styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="contactPage">
-    <nav class="navbar">
-      <img src="./img/main-logo.svg" alt="simple scanner logo" />
-      <div class="topnav__links-container">
-        <div class="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+
+  <body class="contactPage body-contact" id="contact-page">
+
+    <span class="circle1 circle"></span>
+
+    <div id="features" data-label="features" class="main">
+      <nav class="topnav">
+        <img src="./img/logo.svg" alt="simple scanner logo" />
+        <div class="topnav__links-container">
+          <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="topnav__links">
+            <a href="./index.html#features" class="topnav__link">Features</a>
+            <a href="./index.html#demo" class="topnav__link">Demo</a>
+            <a href="./index.html#pricing" class="topnav__link">Pricing</a>
+            <a href="./index.html#team" class="topnav__link">Team</a>
+          </div>
         </div>
-        <div class="topnav__links">
-          <a href="/#features" class="topnav__link">Features</a>
-          <a href="/#demo" class="topnav__link">Demo</a>
-          <a href="/#pricing" class="topnav__link">Pricing</a>
-          <a href="/#team" class="topnav__link">Team</a>
-        </div>
+      </nav>
+      <div class="contact">
+        <h2 class="contact__title">Contact Us</h2>
+        <form class="contact__form">
+          <label>Name </label>
+          <input class="form__input" type="text" id="name" placeholder="Your Name" required />
+
+          <label>Email </label>
+          <input class="form__input" type="email" id="email" placeholder="Your Email" required />
+
+          <label>Summary </label>
+          <textarea id="summary" name="summary" rows="4" placeholder="Details..." required></textarea>
+
+          <input type="submit" value="submit" class="form__submit" />
+        </form>
       </div>
-    </nav>
-    <div class="contact">
-      <h1 class="contact__title">Contact Form</h1>
-      <form class="contact__form">
-        <label>Name:</label>
-        <input
-          class="form__input"
-          type="text"
-          id="name"
-          placeholder="Your Name"
-          required
-        />
 
-        <label>Email:</label>
-        <input
-          class="form__input"
-          type="email"
-          id="email"
-          placeholder="Your Email"
-          required
-        />
-
-        <label>summary:</label>
-        <textarea
-          id="summary"
-          name="summary"
-          rows="4"
-          placeholder="Details..."
-          required
-        ></textarea>
-
-        <input type="submit" value="submit" class="form__submit" />
-      </form>
     </div>
-
-    <footer>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a>Privacy Policy</a>
+    <footer class="contact-footer">
+      <div class="main footer-content">
+        <div class="footer-links">
+          <a href="/contact.html">Contact</a>
+          <a>Privacy Policy</a>
+        </div>
+        <img src="./img/footer-logo.svg" />
+        <p class="copyright">© <span id="year"></span> Simple Scanner</p>
       </div>
-      <img src="./img/footer-logo.svg" />
-      <p class="copyright">© <span id="year"></span> Simple Scanner</p>
     </footer>
-
     <script src="./app.js"></script>
   </body>
+
 </html>
