@@ -590,10 +590,10 @@ Button CSS if used again
     max-width: 60%;
   }
 
-  body{
-  background-position-y: -30%, 20%, 85%;
-  background-position-x: 0%, 20%, 20%;
-  background-size: auto, auto, auto;
+  body {
+    background-position-y: -30%, 20%, 85%;
+    background-position-x: 0%, 20%, 20%;
+    background-size: auto, auto, auto;
   }
 }
 
@@ -609,6 +609,7 @@ Button CSS if used again
     position: absolute;
     display: flex;
     flex-direction: column;
+    background-color: var(--light-blue-btn);
     top: 120px;
   }
 
