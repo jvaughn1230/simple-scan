@@ -246,8 +246,9 @@ a:hover {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: var(--primary-link-color);
   margin: 5px auto;
+  transition: all 500ms;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -256,10 +257,13 @@ a:hover {
 
 .hamburger.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
+  transition: all 500ms;
 }
 
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+  transition: all 500ms;
+
 }
 
 /* Features Section CSS */
