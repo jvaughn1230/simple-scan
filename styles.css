@@ -2,6 +2,7 @@
   --primary-color: #2c4ab6;
   --footer-color: #44558b;
   --purple-btn: #785987;
+  --light-blue-btn: #44558B;
   --bg-color: #2c4177;
   --pink-circle: #785987;
   --blue-circle: #2c4ab6;
@@ -154,21 +155,52 @@ a:hover {
 }
 
 .sidenav-label {
-  color: black;
+  color: var(--btn-text-color);
   font-weight: bold;
-
+  /* font-size: clamp(1px, 16w, 48px); */
   font-size: clamp(1px, 3.125vw, 48px);
   opacity: 0;
   transition: opacity 0.1s;
-  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+  
 }
+
+@keyframes moveLeft {
+  from {margin-right: 0;}
+  to {margin-right:1.5rem;}
+}
+
 
 .sidenav-link:hover ~ .sidenav-label {
   opacity: 1;
+  background: var(--light-blue-btn);
+  /* transition: all 800ms; */
+  animation-name: moveLeft;
+  animation-duration: 800ms;
+  border-radius: 5px;
+  padding:0 10px; 
+}
+
+/* .side-nav-link:hover::before{
+  content:""; 
+  height: 5px;
+  width: 100px; 
+  border-bottom: 2px solid #000;
+} */
+
+/* .sidenav-label::after {
+  content:""; 
+  border-bottom: 2px solid #000;
+  height: 5px;
+} */
+
+
+.sidenav-label:hover { 
+
 }
 
 .sidenav-link {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(68, 85, 139, 0.8);
   border-radius: 50%;
   height: 25px;
   width: 25px;
@@ -176,8 +208,8 @@ a:hover {
 }
 
 .sidenav-link-selected {
-  background: black;
-  transform: scale(1.4);
+  background: #8AA4CC;
+  transform: scale(1.2);
 }
 
 /* Top Nav Styles */
@@ -200,9 +232,14 @@ a:hover {
 
 .topnav a {
   font-size: 18px;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
+.topnav a:hover { 
+  background: var(--light-blue-btn);
+  border-radius: 5px;
+  transition: all 500ms;
+}
 .hamburger {
   display: inline-block;
   display: none;
