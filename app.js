@@ -1,12 +1,14 @@
 function activateNavigation() {
-
   const sections = document.querySelectorAll("section");
   const sideNavContainer = document.createElement("nav");
   const navItems = Array.from(sections).map((section) => {
     return `
     <div class='sidenav-item' data-for-section='${section.id}'>
         <a href='#${section.id}' class='sidenav-link'></a>
-        <span class='sidenav-label'>${section.dataset.label[0].toUpperCase()+section.dataset.label.slice(1)}</span>
+        <span class='sidenav-label'>${
+          section.dataset.label[0].toUpperCase() +
+          section.dataset.label.slice(1)
+        }</span>
     </div>
     `;
   });
@@ -21,7 +23,6 @@ function activateNavigation() {
       });
 
       const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
-      // console.log("visible section: ",visibleSection)
 
       document
         .querySelector(
@@ -46,6 +47,7 @@ function newDate() {
 }
 
 document.getElementById("year").innerHTML = newDate();
+
 // Mobile Menu
 const hamburger = document.querySelector(".hamburger");
 const topNavMenu = document.querySelector(".topnav__links");
@@ -63,16 +65,13 @@ document.querySelectorAll(".topnav__link").forEach((n) =>
 );
 
 // jquery smooth scrolling to ensure smooth scrolling for all browsers
-$(document).ready(function(){
-  $('.sidenav-link').click(function(e){
+$(document).ready(function () {
+  $(".sidenav-link").click(function (e) {
     e.preventDefault();
-    // console.log("event: ", e)
-    let target = $($(this).attr('href'));
-    // console.log("target: ",target)
-    if(target.length){
+    let target = $($(this).attr("href"));
+    if (target.length) {
       let scrollTo = target.offset().top;
-      // console.log("scrollTo: ",scrollTo)
-      $('body, html').animate({scrollTop: scrollTo+'px'}, 500);
+      $("body, html").animate({ scrollTop: scrollTo + "px" }, 500);
     }
   });
 });
