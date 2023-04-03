@@ -76,6 +76,7 @@ a {
 
 a:hover {
   opacity: 0.75;
+  background: none !important;
 }
 
 .main {
