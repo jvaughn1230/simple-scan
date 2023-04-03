@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,20 +7,28 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
     <title>Contact</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/favicon.svg" />
   </head>
 
   <body class="contactPage body-contact" id="contact-page">
-
     <span class="circle1 circle"></span>
 
     <div id="features" data-label="features" class="main">
       <nav class="topnav">
-        <img src="./img/logo.svg" alt="simple scanner logo" />
+        <a href="/">
+          <img src="./img/logo.svg" alt="simple scanner logo" />
+        </a>
         <div class="topnav__links-container">
           <div class="hamburger">
             <div class="bar"></div>
@@ -40,18 +47,35 @@
         <h2 class="contact__title">Contact Us</h2>
         <form class="contact__form">
           <label>Name </label>
-          <input class="form__input" type="text" id="name" placeholder="Your Name" required />
+          <input
+            class="form__input"
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
 
           <label>Email </label>
-          <input class="form__input" type="email" id="email" placeholder="Your Email" required />
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          />
 
           <label>Summary </label>
-          <textarea id="summary" name="summary" rows="4" placeholder="Details..." required></textarea>
+          <textarea
+            id="summary"
+            name="summary"
+            rows="4"
+            placeholder="Details..."
+            required
+          ></textarea>
 
           <input type="submit" value="submit" class="form__submit" />
         </form>
       </div>
-
     </div>
     <footer class="contact-footer">
       <div class="main footer-content">
@@ -65,5 +89,4 @@
     </footer>
     <script src="./app.js"></script>
   </body>
-
 </html>
