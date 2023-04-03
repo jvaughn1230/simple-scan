@@ -20,14 +20,13 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <!-- <--!Side Scrolling on mobile caused by pricing containers-->
 
-  <body>
+  <body class="body-index">
     <span class="circle1 circle"></span>
 
     <section id="features" data-label="features" class="main features">
       <nav class="topnav">
-        <img src="./img/main-logo.svg" alt="simple scanner logo" />
+        <img src="./img/logo.svg" alt="simple scanner logo" />
         <div class="topnav__links-container">
           <div class="hamburger">
             <div class="bar"></div>
@@ -79,7 +78,12 @@
       </ul>
     </section>
 
-    <section id="pricing" data-label="pricing" class="main relative">
+    <section
+      id="pricing"
+      class="pricing-section"
+      data-label="pricing"
+      class="main relative"
+    >
       <span class="circle4 circle"></span>
       <h2>We're straight to the point with our pricing</h2>
       <div class="pricing-container">
@@ -90,8 +94,10 @@
           <button>Sign Up</button>
         </div>
         <div class="price">
-          <h2><span>$</span>12.50</h2>
-          <p>/month</p>
+          <article>
+            <h2><span>$</span>12.50</h2>
+            <p>/month</p>
+          </article>
           <p>billed annually</p>
           <button>Sign Up</button>
         </div>
@@ -126,12 +132,14 @@
       </div>
 
       <footer>
-        <div class="footer-links">
-          <a href="/contact.html">Contact</a>
-          <a>Privacy Policy</a>
+        <div class="main footer-content">
+          <div class="footer-links">
+            <a href="/contact.html">Contact</a>
+            <a>Privacy Policy</a>
+          </div>
+          <img src="./img/footer-logo.svg" />
+          <p class="copyright">© <span id="year"></span> Simple Scanner</p>
         </div>
-        <img src="./img/footer-logo.svg" />
-        <p class="copyright">© <span id="year"></span> Simple Scanner</p>
       </footer>
     </section>
 
