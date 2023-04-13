@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,135 +8,151 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="/img/favicon.svg" />
 
     <link rel="stylesheet" href="./styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body class="body-index">
-    <span class="circle1 circle"></span>
+    <div class="main-container">
+      <span class="circle1 circle"></span>
 
-    <section id="features" data-label="features" class="main features">
-      <nav class="topnav">
-        <a href="/" class="topnav__logo-link">
-          <img src="./img/logo.svg" alt="simple scanner logo" />
-        </a>
+      <section id="features" data-label="features" class="main features">
+        <nav class="topnav">
+          <a href="/" class="topnav__logo-link">
+            <img src="./img/logo.svg" alt="simple scanner logo" />
+          </a>
 
-        <div class="topnav__links-container">
-          <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+          <div class="topnav__links-container">
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="topnav__links">
+              <a href="#features" class="topnav__link">Features</a>
+              <a href="#demo" class="topnav__link">Demo</a>
+              <a href="#pricing" class="topnav__link">Pricing</a>
+              <a href="#team" class="topnav__link">Team</a>
+            </div>
           </div>
-          <div class="topnav__links">
-            <a href="#features" class="topnav__link">Features</a>
-            <a href="#demo" class="topnav__link">Demo</a>
-            <a href="#pricing" class="topnav__link">Pricing</a>
-            <a href="#team" class="topnav__link">Team</a>
-          </div>
+          <!-- <button>Free Trial</button> -->
+        </nav>
+        <div class="maxw relative">
+          <span class="circle2 circle"></span>
+          <h1>
+            Protect Yourself.<br />
+            It's Simple.
+          </h1>
+          <p>No-frills scanner that does what it needs to do</p>
         </div>
-        <!-- <button>Free Trial</button> -->
-      </nav>
-      <div class="maxw relative">
-        <span class="circle2 circle"></span>
-        <h1>
-          Protect Yourself.<br />
-          It's Simple.
-        </h1>
-        <p>No-frills scanner that does what it needs to do</p>
-      </div>
-    </section>
+      </section>
 
-    <section id="demo" class="demo maxw main" data-label="demo">
-      <span class="circle3 circle"></span>
-      <div class="demo-col1">
-        <h2>Reports Sent Straight to your inbox</h2>
-        <img src="./img/screenshot.svg" />
-      </div>
-
-      <ul class="app-features">
-        <li>
-          <div class="feature">Zero Login</div>
-        </li>
-        <li>
-          <div class="feature">No password to memorize</div>
-        </li>
-        <li>
-          <div class="feature">Simple User Experience</div>
-        </li>
-        <li>
-          <div class="feature">Email-Based Settings Control</div>
-        </li>
-        <li>
-          <div class="feature">Emailed Security Reports</div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="pricing" class="pricing-section main" data-label="pricing" class="main relative">
-      <span class="circle4 circle"></span>
-      <h2>We're straight to the point with our pricing</h2>
-      <div class="pricing-container">
-        <div class="price">
-          <h2><span>$</span>15</h2>
-          <p>/month</p>
-          <p>billed monthly</p>
-          <button>Sign Up</button>
+      <section id="demo" class="demo maxw main" data-label="demo">
+        <span class="circle3 circle"></span>
+        <div class="demo-col1">
+          <h2>Reports Sent Straight to your inbox</h2>
+          <img src="./img/screenshot.svg" />
         </div>
-        <div class="price">
-          <article>
-            <h2><span>$</span>12.50</h2>
+
+        <ul class="app-features">
+          <li>
+            <div class="feature">Zero Login</div>
+          </li>
+          <li>
+            <div class="feature">No password to memorize</div>
+          </li>
+          <li>
+            <div class="feature">Simple User Experience</div>
+          </li>
+          <li>
+            <div class="feature">Email-Based Settings Control</div>
+          </li>
+          <li>
+            <div class="feature">Emailed Security Reports</div>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        id="pricing"
+        class="pricing-section main"
+        data-label="pricing"
+        class="main relative"
+      >
+        <span class="circle4 circle"></span>
+        <h2>We're straight to the point with our pricing</h2>
+        <div class="pricing-container">
+          <div class="price">
+            <h2><span>$</span>15</h2>
             <p>/month</p>
-          </article>
-          <p>billed annually</p>
-          <button>Sign Up</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="team relative" data-label="team">
-      <span class="circle circle5"></span>
-      <span class="circle circle6"></span>
-      <div class="main">
-        <h2 class="team-header">A one man team that cares about your safety</h2>
-        <div class="team-container">
-          <div class="team-summary">
-            <p>
-              Back in the early 2000s I was hacked and had money stolen from an
-              account.
-            </p>
-            <p>
-              As a result of that day, and a long love of technology, I decided
-              to become more security aware and prepared.
-            </p>
-            <p>
-              Years later I have found myself working in a variety of different
-              roles in IT, from pen-tester, sys admin, devops, and lately as a
-              software developer. With each of these roles I have brought
-              security mindedness to everything I do so to ensure that I and
-              others won't have to experience that kind of disruption again.
-            </p>
+            <p>billed monthly</p>
+            <button>Sign Up</button>
           </div>
-          <img src="/img/profile.svg" />
-        </div>
-      </div>
-
-      <footer>
-        <div class="main footer-content">
-          <div class="footer-links">
-            <a href="/contact.html">Contact</a>
-            <a>Privacy Policy</a>
+          <div class="price">
+            <article>
+              <h2><span>$</span>12.50</h2>
+              <p>/month</p>
+            </article>
+            <p>billed annually</p>
+            <button>Sign Up</button>
           </div>
-          <img src="./img/footer-logo.svg" />
-          <p class="copyright">© <span id="year"></span> Simple Scanner</p>
         </div>
-      </footer>
-    </section>
+      </section>
 
+      <section id="team" class="team relative" data-label="team">
+        <span class="circle circle5"></span>
+        <span class="circle circle6"></span>
+        <div class="main">
+          <h2 class="team-header">
+            A one man team that cares about your safety
+          </h2>
+          <div class="team-container">
+            <div class="team-summary">
+              <p>
+                Back in the early 2000s I was hacked and had money stolen from
+                an account.
+              </p>
+              <p>
+                As a result of that day, and a long love of technology, I
+                decided to become more security aware and prepared.
+              </p>
+              <p>
+                Years later I have found myself working in a variety of
+                different roles in IT, from pen-tester, sys admin, devops, and
+                lately as a software developer. With each of these roles I have
+                brought security mindedness to everything I do so to ensure that
+                I and others won't have to experience that kind of disruption
+                again.
+              </p>
+            </div>
+            <div class="profile-container">
+              <img src="/img/profile.svg" />
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="main footer-content">
+            <div class="footer-links">
+              <a href="/contact.html">Contact</a>
+              <a>Privacy Policy</a>
+            </div>
+            <img src="./img/footer-logo.svg" />
+            <p class="copyright">© <span id="year"></span> Simple Scanner</p>
+          </div>
+        </footer>
+      </section>
+    </div>
     <script src="./app.js"></script>
   </body>
-
 </html>

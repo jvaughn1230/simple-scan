@@ -3,7 +3,7 @@
   --light-blue: #44558b;
   --bg-color: #2c4177;
   --blue-circle: #2c4ab6;
-  --footer-color: #44558B;
+  --footer-color: #44558b;
 
   --primary-font: "Rajdhani", sans-serif;
   --links-font: "Titillium Web", sans-serif;
@@ -80,9 +80,10 @@ a:hover {
 }
 
 .main {
-  margin-inline: 5em;
+  margin: 0 auto;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
+  width: 80vw;
 }
 
 .maxw {
@@ -157,7 +158,7 @@ a:hover {
   --nav-gap: 30px;
   padding: var(--nav-gap);
   position: fixed;
-  right: 5%;
+  right: 2.5%;
   top: 60%;
   transform: translateY(-50%);
 }
@@ -227,7 +228,7 @@ a:hover {
   justify-content: space-around;
 }
 
-.topnav__logo-link:hover{
+.topnav__logo-link:hover {
   background: none;
 }
 
@@ -235,9 +236,13 @@ a:hover {
   background: none;
 }
 
-.topnav a {
+.topnav__link {
   font-size: 18px;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0;
+}
+
+.topnav__logo-link {
+  padding: 0;
 }
 
 .topnav__link:hover {
@@ -296,12 +301,12 @@ a:hover {
 .demo {
   display: flex;
   justify-content: space-between;
-  padding-right: 15.625vw;
   padding-top: 3rem;
+  gap: 6rem;
 }
 
 .demo-col1 {
-  max-width: 40%;
+  width: 100%;
 }
 
 .demo-col1 h2 {
@@ -319,6 +324,10 @@ ul,
 li {
   list-style: none;
   padding: 0;
+}
+
+ul {
+  width: 100%;
 }
 
 .app-features {
@@ -376,7 +385,7 @@ li:before {
 .pricing-container {
   display: flex;
   justify-content: space-around;
-  padding-right: 11.4583vw;
+  gap: 6rem;
 }
 
 .pricing-container div {
@@ -385,6 +394,7 @@ li:before {
   border: 1px solid blue;
   border: solid 2px #4f65ac;
   padding: 4em 8em;
+  width: 100%;
 }
 
 .price h2 {
@@ -439,16 +449,18 @@ li:before {
 }
 
 .team-summary {
-  flex: 2;
   font-size: var(--small-text);
   line-height: 1.5;
+  width: 100%;
 }
 
-.team-container img {
+.profile-container {
   flex: 1/2;
+}
+.team-container img {
   height: auto;
   min-width: 180px;
-  width: 20%;
+  width: 100%;
 }
 
 /* Footer Styles */
@@ -461,6 +473,7 @@ footer {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  max-width: 80vw;
 }
 
 footer img {
@@ -564,8 +577,12 @@ input {
     row-gap: 1rem;
   }
   .pricing-container div {
-    max-width: 60%;
+    max-width: 80%;
     padding: 3em 6em;
+  }
+
+  .pricing-section h2 {
+    text-align: center;
   }
 
   .team-container {
@@ -713,6 +730,14 @@ input {
     max-width: 100%;
   }
 
+  .demo {
+    gap: 0;
+  }
+
+  .demo ul {
+    width: 80%;
+  }
+
   /********* CONTACT FORM ***********/
   .contact__form {
     display: flex;
@@ -753,5 +778,11 @@ input {
   .pricing-container div {
     max-width: 100%;
     padding: 1.5em 2em;
+  }
+}
+
+@media (max-width: 350px) {
+  .demo-col1 img {
+    width: 200px;
   }
 }
