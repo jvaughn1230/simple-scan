@@ -398,7 +398,7 @@ li:before {
 }
 
 .price h2 {
-  font-size: var(--large-text);
+  font-size: var(--xl-text);
   font-weight: 700;
 }
 
@@ -783,6 +783,6 @@ input {
 
 @media (max-width: 350px) {
   .demo-col1 img {
-    width: 200px;
+    min-width: 0px;
   }
 }
